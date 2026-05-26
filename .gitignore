@@ -1,0 +1,18 @@
+.vs/
+
+Debug/
+Release/
+x64/
+x86/
+
+*.obj
+*.exe
+*.pdb
+*.ilk
+
+# Bỏ qua toàn bộ thư mục tải về của NuGet
+packages/
+!packages/build/
+
+# ĐẢM BẢO KHÔNG BỎ QUA file này
+!packages.config
