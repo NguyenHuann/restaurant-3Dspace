@@ -1,4 +1,4 @@
-# Không Gian Nhà Hàng 3D (3D Restaurant Space)
+# Không Gian Nhà Hàng 3D (3D Restaurant Space) (x86 platforms)
 
 Dự án Đồ họa máy tính xây dựng không gian nhà hàng phong cách Diner 3D tương tác, lập trình bằng C++ với thư viện OpenGL và GLUT. Tác giả: Nhóm 8 - 23CN1
 
