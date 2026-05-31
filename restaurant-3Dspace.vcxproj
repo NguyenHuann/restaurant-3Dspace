@@ -154,6 +154,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="bar.h" />
     <ClInclude Include="booth.h" />
     <ClInclude Include="ceiling_fan.h" />
     <ClInclude Include="cup.h" />
