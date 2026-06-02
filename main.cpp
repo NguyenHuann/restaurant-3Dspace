@@ -72,7 +72,7 @@ void init() {
     glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
     glEnable(GL_COLOR_MATERIAL);
-    glClearColor(0.2f, 0.3f, 0.3f, 1.0f); // Sửa màu nền thành xanh rêu tối cho giống ảnh
+    glClearColor(0.2f, 0.3f, 0.3f, 1.0f); // màu nền xanh rêu tối 
 
     GLfloat lightPos[] = { 5.0f, 10.0f, 10.0f, 0.0f };
     GLfloat ambientLight[] = { 0.6f, 0.6f, 0.6f, 1.0f };
@@ -86,13 +86,6 @@ void init() {
     updateCameraDirection();
 }
 
-// BỔ SUNG: Hàm vẽ Poster (Khung ảnh trắng có viền đen)
-void drawPoster() {
-    glColor3f(0.02f, 0.02f, 0.02f); // Viền đen
-    glPushMatrix(); glScalef(2.6f, 3.6f, 0.05f); glutSolidCube(1.0f); glPopMatrix();
-    glColor3f(0.95f, 0.95f, 0.95f); // Lõi trắng
-    glPushMatrix(); glTranslatef(0.0f, 0.0f, 0.03f); glScalef(2.4f, 3.4f, 0.05f); glutSolidCube(1.0f); glPopMatrix();
-}
 
 // BỔ SUNG: Hàm vẽ tủ nhỏ dưới tường
 void drawCabinet() {
@@ -132,9 +125,7 @@ void display() {
     drawFloor();
     drawWall();
 
-    // 1. CHI TIẾT TRANG TRÍ MỚI (Khung tranh & Tủ xanh)
-    glPushMatrix(); glTranslatef(0.0f, 4.0f, -8.0f); drawPoster(); glPopMatrix(); // Tranh tường sau
-    glPushMatrix(); glTranslatef(8.0f, 4.0f, -8.0f); drawPoster(); glPopMatrix(); // Tranh tường sau phải
+    // 1. CHI TIẾT TRANG TRÍ MỚI (Tủ xanh)
     glPushMatrix(); glTranslatef(2.0f, 0.0f, -7.2f); drawCabinet(); glPopMatrix(); // Tủ xanh
 
     // QUẠT TRẦN

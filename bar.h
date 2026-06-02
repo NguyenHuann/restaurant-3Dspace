@@ -80,7 +80,7 @@ inline void drawBarCounter() {
     glutSolidCube(1.0f);
     glPopMatrix();
 
-    // Mặt quầy (Màu đỏ)
+    // Mặt quầy (màu xám)
     glColor3f(0.5f, 0.5f, 0.5f);
     glPushMatrix();
     glTranslatef(0.0f, 1.25f, 0.0f);
