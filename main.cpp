@@ -73,6 +73,7 @@ void init() {
     glEnable(GL_LIGHT0);
     glEnable(GL_COLOR_MATERIAL);
     glClearColor(0.2f, 0.3f, 0.3f, 1.0f); // màu nền xanh rêu tối 
+    glEnable(GL_NORMALIZE);
 
     GLfloat lightPos[] = { 5.0f, 10.0f, 10.0f, 0.0f };
     GLfloat ambientLight[] = { 0.6f, 0.6f, 0.6f, 1.0f };
@@ -121,7 +122,7 @@ void display() {
     else {
         gluLookAt(camX, camY, camZ, camX + lookX, camY + lookY, camZ + lookZ, 0.0f, 1.0f, 0.0f);
     }
-
+    glDisable(GL_LIGHTING);
     drawFloor();
     drawWall();
 
@@ -187,7 +188,7 @@ int main(int argc, char** argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
     glutInitWindowSize(1024, 768);
-    glutCreateWindow("Interactive 3D Restaurant");
+    glutCreateWindow("Restaurant 3D Space");
 
     init();
     glutDisplayFunc(display);

@@ -3,7 +3,7 @@
 #include <GL/glut.h>
 
 inline void drawWall() {
-    glColor3f(0.65f, 0.6f, 0.75f);
+    glColor3f(0.5f, 0.8f, 0.5f);
 
     // Tường sau
     glPushMatrix();
