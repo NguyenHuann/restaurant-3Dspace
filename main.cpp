@@ -2,6 +2,7 @@
 #include <GL/glu.h>
 #include <math.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 #include "floor.h"
 #include "wall.h"
@@ -184,7 +185,28 @@ void reshape(int w, int h) {
     glMatrixMode(GL_MODELVIEW);
 }
 
+void printInstructions() {
+    printf("==================================================\n");
+    printf("        HUONG DAN DIEU KHIEN (CONTROLS)\n");
+    printf("==================================================\n");
+    printf("[CHUOT]\n");
+    printf(" - Giu Chuot Phai + Di chuyen: Xoay goc nhin\n\n");
+
+    printf("[BAN PHIM - DI CHUYEN CAMERA]\n");
+    printf(" - W / S : Tien toi / Lui lai\n");
+    printf(" - A / D : Sang trai / Sang phai\n");
+    printf(" - E / R : Di chuyen len cao / Ha xuong thap\n\n");
+
+    printf("[BAN PHIM - TUONG TAC]\n");
+    printf(" - G     : Bat / Tat hieu ung quat tran\n");
+    printf(" - F     : Bat / Tat che do Camera tu dong xoay\n");
+    printf(" - ESC   : Thoat chuong trinh\n");
+    printf("==================================================\n");
+    printf(">> Click chuot vao cua so do hoa 3D de bat dau!\n");
+}
+
 int main(int argc, char** argv) {
+    printInstructions();
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
     glutInitWindowSize(1024, 768);
